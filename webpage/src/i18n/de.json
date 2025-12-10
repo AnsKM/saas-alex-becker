@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "BauChat Pro - Die WhatsApp-Alternative für rechtssichere Baudokumentation",
+    "description": "Verwandeln Sie Ihre WhatsApp-Kommunikation in DSGVO-konforme, gerichtsfeste Baudokumentation mit KI-gestützter Automatisierung."
+  },
+  "nav": {
+    "features": "Funktionen",
+    "benefits": "Vorteile",
+    "pricing": "Preise",
+    "demo": "Demo",
+    "login": "Anmelden",
+    "cta": "Kostenlos testen"
+  },
+  "hero": {
+    "badge": "Beliebt bei deutschen Bauunternehmen",
+    "title": "Die WhatsApp-Alternative für rechtssichere Baudokumentation",
+    "subtitle": "Verwandeln Sie Ihre WhatsApp-Kommunikation in DSGVO-konforme, gerichtsfeste Baudokumentation mit KI-gestützter Automatisierung.",
+    "headline": "WhatsApp-Dokumentation. Rechtssicher. DSGVO-konform.",
+    "subheadline": "72% der deutschen Bauunternehmen nutzen WhatsApp für die Baustelle – aber Ihre Nachrichten sind weder DSGVO-konform noch gerichtsverwendbar. Das ändern wir.",
+    "cta_primary": "Kostenlos testen",
+    "cta_secondary": "Demo ansehen",
+    "cta": {
+      "primary": "Kostenlose Pilotphase starten",
+      "secondary": "Mehr erfahren"
+    },
+    "trust": {
+      "gdpr": "DSGVO-konform",
+      "servers": "Deutsche Server",
+      "training": "Keine Schulung nötig"
+    }
+  },
+  "features": {
+    "title": "Alles, was Sie für rechtssichere Baudokumentation brauchen",
+    "subtitle": "Von WhatsApp-ähnlicher Einfachheit bis hin zu gerichtsfester Dokumentation",
+    "whatsapp": {
+      "title": "Vertraute WhatsApp-Oberfläche",
+      "description": "Ihre Mitarbeiter kennen sich bereits aus. Keine Schulung erforderlich."
+    },
+    "ai": {
+      "title": "KI-gestützte Automatisierung",
+      "description": "Automatische Erkennung von Mängeln, Fotos und wichtigen Gesprächen."
+    },
+    "legal": {
+      "title": "Gerichtsfeste Dokumentation",
+      "description": "DSGVO-konform mit Zeitstempeln und manipulationssicheren Protokollen."
+    },
+    "export": {
+      "title": "Einfacher Export",
+      "description": "Alle Daten als strukturierte PDFs oder Excel-Dateien exportieren."
+    }
+  },
+  "benefits": {
+    "title": "Warum BauChat Pro?",
+    "subtitle": "Die Lösung für moderne Bauunternehmen",
+    "time": {
+      "title": "70% Zeitersparnis",
+      "description": "bei der Dokumentation"
+    },
+    "compliant": {
+      "title": "100% DSGVO-konform",
+      "description": "Rechtssicher dokumentieren"
+    },
+    "easy": {
+      "title": "Sofort einsatzbereit",
+      "description": "Keine Schulung notwendig"
+    }
+  },
+  "pricing": {
+    "title": "Transparente Preise",
+    "subtitle": "Starten Sie kostenlos, skalieren Sie nach Bedarf",
+    "starter": {
+      "name": "Starter",
+      "price": "0",
+      "period": "pro Monat",
+      "description": "Perfekt für kleine Teams",
+      "features": [
+        "Bis zu 5 Benutzer",
+        "Grundlegende Dokumentation",
+        "30 Tage Speicherung",
+        "E-Mail Support"
+      ],
+      "cta": "Kostenlos starten"
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "49",
+      "period": "pro Monat",
+      "description": "Für wachsende Unternehmen",
+      "popular": "Am beliebtesten",
+      "features": [
+        "Bis zu 50 Benutzer",
+        "KI-gestützte Automatisierung",
+        "Unbegrenzte Speicherung",
+        "Prioritäts-Support",
+        "Export-Funktionen"
+      ],
+      "cta": "Jetzt starten"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Individuell",
+      "period": "",
+      "description": "Für große Organisationen",
+      "features": [
+        "Unbegrenzte Benutzer",
+        "Dedizierter Account Manager",
+        "SLA-Garantie",
+        "On-Premise möglich",
+        "Individuelle Anpassungen"
+      ],
+      "cta": "Kontakt aufnehmen"
+    }
+  },
+  "pain": {
+    "headline": "Kennen Sie diese WhatsApp-Probleme auf der Baustelle?",
+    "card1": {
+      "title": "Bis zu €50.000 Bussgeld",
+      "text": "WhatsApp überträgt Kontaktdaten auf US-Server – ein DSGVO-Verstoss, der teuer werden kann."
+    },
+    "card2": {
+      "title": "8+ Stunden pro Woche verschwendet",
+      "text": "Wichtige Absprachen verschwinden in privaten Chats. Bei Streitfällen ist nichts beweisbar."
+    },
+    "card3": {
+      "title": "1-2 Stunden täglich für Berichte",
+      "text": "Bauleiter verbringen wertvolle Zeit mit Dokumentation statt Bauleitung."
+    }
+  },
+  "cta": {
+    "title": "Bereit für rechtssichere Baudokumentation?",
+    "subtitle": "Starten Sie noch heute kostenlos. Keine Kreditkarte erforderlich.",
+    "button": "Kostenlos testen"
+  },
+  "footer": {
+    "product": "Produkt",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "support": "Support",
+    "about": "Über uns",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "imprint": "Impressum",
+    "contact": "Kontakt",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

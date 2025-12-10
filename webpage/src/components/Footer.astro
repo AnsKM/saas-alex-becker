@@ -1,0 +1,100 @@
+---
+interface Props {
+  lang: 'de' | 'en';
+}
+
+const { lang } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-gray-300 py-12 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <!-- Brand -->
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-4">BauChat Pro</h3>
+        <p class="text-gray-400">
+          {lang === 'de'
+            ? 'DSGVO-konforme WhatsApp-Kommunikation für Baufirmen'
+            : 'GDPR-compliant WhatsApp communication for construction companies'}
+        </p>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">
+          {lang === 'de' ? 'Produkt' : 'Product'}
+        </h4>
+        <ul class="space-y-2">
+          <li>
+            <a href={`/${lang}#features`} class="hover:text-white transition">
+              {lang === 'de' ? 'Features' : 'Features'}
+            </a>
+          </li>
+          <li>
+            <a href={`/${lang}#pricing`} class="hover:text-white transition">
+              {lang === 'de' ? 'Preise' : 'Pricing'}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">
+          {lang === 'de' ? 'Unternehmen' : 'Company'}
+        </h4>
+        <ul class="space-y-2">
+          <li>
+            <a href={`/${lang}#contact`} class="hover:text-white transition">
+              {lang === 'de' ? 'Kontakt' : 'Contact'}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">
+          {lang === 'de' ? 'Rechtliches' : 'Legal'}
+        </h4>
+        <ul class="space-y-2">
+          <li>
+            <a href={lang === 'de' ? '/de/impressum' : '/en/imprint'} class="hover:text-white transition">
+              {lang === 'de' ? 'Impressum' : 'Imprint'}
+            </a>
+          </li>
+          <li>
+            <a href={lang === 'de' ? '/de/datenschutz' : '/en/privacy'} class="hover:text-white transition">
+              {lang === 'de' ? 'Datenschutz' : 'Privacy Policy'}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-gray-400 text-sm">
+        © {currentYear} BauChat Pro. {lang === 'de' ? 'Alle Rechte vorbehalten.' : 'All rights reserved.'}
+      </p>
+
+      <!-- Language Switcher -->
+      <div class="flex gap-4">
+        <a
+          href="/de"
+          class={`text-sm ${lang === 'de' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'} transition`}
+        >
+          Deutsch
+        </a>
+        <span class="text-gray-600">|</span>
+        <a
+          href="/en"
+          class={`text-sm ${lang === 'en' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'} transition`}
+        >
+          English
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

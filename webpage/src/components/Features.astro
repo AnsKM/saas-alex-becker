@@ -1,0 +1,187 @@
+---
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'de' } = Astro.props;
+
+const content = {
+  de: {
+    headline: 'Alles, was Ihr Bautagebuch braucht',
+    features: [
+      {
+        title: 'WhatsApp-Integration',
+        text: 'Empfangen Sie alle Nachrichten automatisch - DSGVO-konform auf deutschen Servern',
+        icon: 'chat'
+      },
+      {
+        title: 'KI-Bautagebuch',
+        text: 'HOAI-konformes Bautagebuch wird täglich automatisch generiert',
+        icon: 'document'
+      },
+      {
+        title: 'Projekt-Zuordnung',
+        text: 'Nachrichten werden automatisch nach Projekt, nicht nach Person sortiert',
+        icon: 'folder'
+      },
+      {
+        title: 'Bild-Dokumentation',
+        text: 'GPS-Koordinaten und Zeitstempel für gerichtsfeste Beweisführung',
+        icon: 'camera'
+      },
+      {
+        title: 'Intelligente Suche',
+        text: 'Finden Sie jede Nachricht, jedes Foto, jede Absprache in Sekunden',
+        icon: 'search'
+      },
+      {
+        title: 'Sprachnachrichten-Text',
+        text: 'Deutsche Sprachnachrichten werden automatisch zu durchsuchbarem Text',
+        icon: 'microphone'
+      }
+    ]
+  },
+  en: {
+    headline: 'Everything Your Construction Diary Needs',
+    features: [
+      {
+        title: 'WhatsApp Integration',
+        text: 'Receive all messages automatically - GDPR compliant on German servers',
+        icon: 'chat'
+      },
+      {
+        title: 'AI Construction Diary',
+        text: 'HOAI-compliant construction diary generated automatically every day',
+        icon: 'document'
+      },
+      {
+        title: 'Project Assignment',
+        text: 'Messages are automatically sorted by project, not by person',
+        icon: 'folder'
+      },
+      {
+        title: 'Photo Documentation',
+        text: 'GPS coordinates and timestamps for court-proof evidence',
+        icon: 'camera'
+      },
+      {
+        title: 'Smart Search',
+        text: 'Find any message, photo, or agreement in seconds',
+        icon: 'search'
+      },
+      {
+        title: 'Voice Message Transcription',
+        text: 'German voice messages automatically converted to searchable text',
+        icon: 'microphone'
+      }
+    ]
+  }
+};
+
+const t = content[lang as keyof typeof content] || content.de;
+---
+
+<section class="py-16 md:py-24 bg-blue-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+        {t.headline}
+      </h2>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {t.features.map((feature) => (
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <!-- Icon -->
+          <div class="mb-5">
+            <div class="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary-100 flex items-center justify-center">
+              {feature.icon === 'chat' && (
+                <!-- Chat Bubble Icon -->
+                <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+              )}
+              {feature.icon === 'document' && (
+                <!-- Document with Sparkle Icon -->
+                <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l1.5 1.5M12 3l1.5 1.5M19 3l1.5 1.5" opacity="0.5"/>
+                </svg>
+              )}
+              {feature.icon === 'folder' && (
+                <!-- Folder/Organize Icon -->
+                <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                </svg>
+              )}
+              {feature.icon === 'camera' && (
+                <!-- Camera/Image Icon -->
+                <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              )}
+              {feature.icon === 'search' && (
+                <!-- Search/Magnifying Glass Icon -->
+                <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+              )}
+              {feature.icon === 'microphone' && (
+                <!-- Microphone Icon -->
+                <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                </svg>
+              )}
+            </div>
+          </div>
+
+          <!-- Content -->
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">
+            {feature.title}
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            {feature.text}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Subtle animation on hover */
+  .grid > div {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .grid > div:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Staggered fade-in animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .grid > div {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .grid > div:nth-child(1) { animation-delay: 0.1s; }
+  .grid > div:nth-child(2) { animation-delay: 0.15s; }
+  .grid > div:nth-child(3) { animation-delay: 0.2s; }
+  .grid > div:nth-child(4) { animation-delay: 0.25s; }
+  .grid > div:nth-child(5) { animation-delay: 0.3s; }
+  .grid > div:nth-child(6) { animation-delay: 0.35s; }
+</style>

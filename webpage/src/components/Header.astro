@@ -1,0 +1,24 @@
+---
+interface Props {
+  lang: 'de' | 'en';
+}
+
+const { lang } = Astro.props;
+---
+
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold text-primary-600">BauChat Pro</div>
+    <div class="flex items-center gap-6">
+      <a href={`/${lang}#features`} class="text-gray-700 hover:text-primary-600 transition">
+        {lang === 'de' ? 'Features' : 'Features'}
+      </a>
+      <a href={`/${lang}#pricing`} class="text-gray-700 hover:text-primary-600 transition">
+        {lang === 'de' ? 'Preise' : 'Pricing'}
+      </a>
+      <a href={`/${lang}#contact`} class="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition">
+        {lang === 'de' ? 'Pilot starten' : 'Start Pilot'}
+      </a>
+    </div>
+  </nav>
+</header>

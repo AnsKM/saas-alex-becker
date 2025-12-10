@@ -1,0 +1,159 @@
+---
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'de' } = Astro.props;
+
+const content = {
+  de: {
+    headline: 'So einfach funktioniert es',
+    subheadline: 'Ihr Team nutzt weiterhin WhatsApp. BauChat Pro arbeitet im Hintergrund.',
+    steps: [
+      {
+        number: '1',
+        title: 'WhatsApp verbinden',
+        text: 'Verbinden Sie Ihre WhatsApp-Projektgruppen in 5 Minuten - ohne App-Wechsel für Ihr Team'
+      },
+      {
+        number: '2',
+        title: 'KI übernimmt',
+        text: 'Unsere KI sortiert, kategorisiert und fasst zusammen - Ihr Bautagebuch schreibt sich von selbst'
+      },
+      {
+        number: '3',
+        title: 'Dokumentation abrufen',
+        text: 'Erhalten Sie DSGVO-konforme, gerichtsfeste Dokumentation mit einem Klick als PDF'
+      }
+    ]
+  },
+  en: {
+    headline: 'How It Works',
+    subheadline: 'Your team keeps using WhatsApp. BauChat Pro works in the background.',
+    steps: [
+      {
+        number: '1',
+        title: 'Connect WhatsApp',
+        text: 'Connect your WhatsApp project groups in 5 minutes - no app switch needed for your team'
+      },
+      {
+        number: '2',
+        title: 'AI Takes Over',
+        text: 'Our AI sorts, categorizes and summarizes - your construction diary writes itself'
+      },
+      {
+        number: '3',
+        title: 'Access Documentation',
+        text: 'Get GDPR-compliant, court-proof documentation with one click as PDF'
+      }
+    ]
+  }
+};
+
+const t = content[lang as keyof typeof content] || content.de;
+---
+
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        {t.headline}
+      </h2>
+      <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+        {t.subheadline}
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="relative">
+      <!-- Desktop connecting line -->
+      <div class="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary-200 to-transparent" aria-hidden="true"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        {t.steps.map((step, index) => (
+          <div class="relative">
+            <!-- Step Card -->
+            <div class="flex flex-col items-center text-center">
+              <!-- Icon Circle -->
+              <div class="relative mb-6">
+                <div class="w-20 h-20 md:w-24 md:h-24 bg-primary-600 rounded-full flex items-center justify-center shadow-lg z-10 relative">
+                  {index === 0 && (
+                    <!-- WhatsApp Icon -->
+                    <svg class="w-10 h-10 md:w-12 md:h-12 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                  )}
+                  {index === 1 && (
+                    <!-- AI Brain Icon -->
+                    <svg class="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                  )}
+                  {index === 2 && (
+                    <!-- PDF Document Icon -->
+                    <svg class="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                  )}
+                </div>
+
+                <!-- Step Number Badge -->
+                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-primary-600">
+                  <span class="text-sm font-bold text-primary-600">{step.number}</span>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                {step.title}
+              </h3>
+              <p class="text-base md:text-lg text-gray-600 max-w-sm">
+                {step.text}
+              </p>
+            </div>
+
+            <!-- Mobile Arrow -->
+            {index < t.steps.length - 1 && (
+              <div class="md:hidden flex justify-center mt-6">
+                <svg class="w-6 h-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Tailwind will handle most styling, but we can add custom animations if needed */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .grid > div {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .grid > div:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .grid > div:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .grid > div:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+</style>

@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "BauChat Pro - The WhatsApp Alternative for Legally Secure Construction Documentation",
+    "description": "Transform your WhatsApp communication into GDPR-compliant, court-proof construction documentation with AI-powered automation."
+  },
+  "nav": {
+    "features": "Features",
+    "benefits": "Benefits",
+    "pricing": "Pricing",
+    "demo": "Demo",
+    "login": "Login",
+    "cta": "Try for Free"
+  },
+  "hero": {
+    "badge": "Popular with German Construction Companies",
+    "title": "The WhatsApp Alternative for Legally Secure Construction Documentation",
+    "subtitle": "Transform your WhatsApp communication into GDPR-compliant, court-proof construction documentation with AI-powered automation.",
+    "headline": "WhatsApp Documentation. Legally Secure. GDPR Compliant.",
+    "subheadline": "72% of German construction companies use WhatsApp on site – but your messages are neither GDPR-compliant nor court-admissible. We change that.",
+    "cta_primary": "Try for Free",
+    "cta_secondary": "Watch Demo",
+    "cta": {
+      "primary": "Start Free Pilot Phase",
+      "secondary": "Learn More"
+    },
+    "trust": {
+      "gdpr": "GDPR Compliant",
+      "servers": "German Servers",
+      "training": "No Training Required"
+    }
+  },
+  "features": {
+    "title": "Everything You Need for Legally Secure Construction Documentation",
+    "subtitle": "From WhatsApp-like simplicity to court-proof documentation",
+    "whatsapp": {
+      "title": "Familiar WhatsApp Interface",
+      "description": "Your team already knows how to use it. No training required."
+    },
+    "ai": {
+      "title": "AI-Powered Automation",
+      "description": "Automatic detection of defects, photos, and important conversations."
+    },
+    "legal": {
+      "title": "Court-Proof Documentation",
+      "description": "GDPR-compliant with timestamps and tamper-proof logs."
+    },
+    "export": {
+      "title": "Easy Export",
+      "description": "Export all data as structured PDFs or Excel files."
+    }
+  },
+  "benefits": {
+    "title": "Why BauChat Pro?",
+    "subtitle": "The solution for modern construction companies",
+    "time": {
+      "title": "70% Time Savings",
+      "description": "in documentation"
+    },
+    "compliant": {
+      "title": "100% GDPR Compliant",
+      "description": "Legally secure documentation"
+    },
+    "easy": {
+      "title": "Ready to Use",
+      "description": "No training necessary"
+    }
+  },
+  "pricing": {
+    "title": "Transparent Pricing",
+    "subtitle": "Start free, scale as needed",
+    "starter": {
+      "name": "Starter",
+      "price": "0",
+      "period": "per month",
+      "description": "Perfect for small teams",
+      "features": [
+        "Up to 5 users",
+        "Basic documentation",
+        "30 days storage",
+        "Email support"
+      ],
+      "cta": "Start Free"
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "49",
+      "period": "per month",
+      "description": "For growing companies",
+      "popular": "Most Popular",
+      "features": [
+        "Up to 50 users",
+        "AI-powered automation",
+        "Unlimited storage",
+        "Priority support",
+        "Export features"
+      ],
+      "cta": "Get Started"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "period": "",
+      "description": "For large organizations",
+      "features": [
+        "Unlimited users",
+        "Dedicated account manager",
+        "SLA guarantee",
+        "On-premise available",
+        "Custom integrations"
+      ],
+      "cta": "Contact Us"
+    }
+  },
+  "pain": {
+    "headline": "Do You Know These WhatsApp Problems on the Construction Site?",
+    "card1": {
+      "title": "Up to €50,000 Fine",
+      "text": "WhatsApp transfers contact data to US servers – a GDPR violation that can be expensive."
+    },
+    "card2": {
+      "title": "8+ Hours Per Week Wasted",
+      "text": "Important agreements disappear in private chats. In disputes, nothing is provable."
+    },
+    "card3": {
+      "title": "1-2 Hours Daily for Reports",
+      "text": "Site managers spend valuable time on documentation instead of management."
+    }
+  },
+  "cta": {
+    "title": "Ready for Legally Secure Construction Documentation?",
+    "subtitle": "Start free today. No credit card required.",
+    "button": "Try for Free"
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "support": "Support",
+    "about": "About Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "imprint": "Imprint",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}

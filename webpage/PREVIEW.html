@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BauChat Pro - Component Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+        .animate-fade-up { animation: fadeInUp 0.6s ease-out forwards; }
+        .card:hover { transform: translateY(-4px); }
+    </style>
+</head>
+<body class="antialiased bg-gray-50">
+
+    <!-- Preview Banner -->
+    <div class="bg-gray-900 text-white py-4 text-center">
+        <p class="font-semibold">Component Preview - BauChat Pro Landing Page</p>
+        <p class="text-sm text-gray-400 mt-1">HowItWorks.astro & Features.astro</p>
+    </div>
+
+    <!-- HowItWorks Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                    So einfach funktioniert es
+                </h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ihr Team nutzt weiterhin WhatsApp. BauChat Pro arbeitet im Hintergrund.
+                </p>
+            </div>
+
+            <!-- Steps -->
+            <div class="relative">
+                <!-- Desktop connecting line -->
+                <div class="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary-200 to-transparent" aria-hidden="true"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    <!-- Step 1 -->
+                    <div class="relative animate-fade-in" style="animation-delay: 0.1s;">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="relative mb-6">
+                                <div class="w-20 h-20 md:w-24 md:h-24 bg-primary-600 rounded-full flex items-center justify-center shadow-lg z-10 relative">
+                                    <svg class="w-10 h-10 md:w-12 md:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                    </svg>
+                                </div>
+                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-primary-600">
+                                    <span class="text-sm font-bold text-primary-600">1</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                                WhatsApp verbinden
+                            </h3>
+                            <p class="text-base md:text-lg text-gray-600 max-w-sm">
+                                Verbinden Sie Ihre WhatsApp-Projektgruppen in 5 Minuten - ohne App-Wechsel für Ihr Team
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative animate-fade-in" style="animation-delay: 0.2s;">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="relative mb-6">
+                                <div class="w-20 h-20 md:w-24 md:h-24 bg-primary-600 rounded-full flex items-center justify-center shadow-lg z-10 relative">
+                                    <svg class="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                    </svg>
+                                </div>
+                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-primary-600">
+                                    <span class="text-sm font-bold text-primary-600">2</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                                KI übernimmt
+                            </h3>
+                            <p class="text-base md:text-lg text-gray-600 max-w-sm">
+                                Unsere KI sortiert, kategorisiert und fasst zusammen - Ihr Bautagebuch schreibt sich von selbst
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative animate-fade-in" style="animation-delay: 0.3s;">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="relative mb-6">
+                                <div class="w-20 h-20 md:w-24 md:h-24 bg-primary-600 rounded-full flex items-center justify-center shadow-lg z-10 relative">
+                                    <svg class="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-primary-600">
+                                    <span class="text-sm font-bold text-primary-600">3</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                                Dokumentation abrufen
+                            </h3>
+                            <p class="text-base md:text-lg text-gray-600 max-w-sm">
+                                Erhalten Sie DSGVO-konforme, gerichtsfeste Dokumentation mit einem Klick als PDF
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+                    Alles, was Ihr Bautagebuch braucht
+                </h2>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Feature 1 -->
+                <div class="card bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 animate-fade-up" style="animation-delay: 0.1s;">
+                    <div class="mb-5">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                        WhatsApp-Integration
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Empfangen Sie alle Nachrichten automatisch - DSGVO-konform auf deutschen Servern
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 animate-fade-up" style="animation-delay: 0.15s;">
+                    <div class="mb-5">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                        KI-Bautagebuch
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        HOAI-konformes Bautagebuch wird täglich automatisch generiert
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 animate-fade-up" style="animation-delay: 0.2s;">
+                    <div class="mb-5">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                        Projekt-Zuordnung
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Nachrichten werden automatisch nach Projekt, nicht nach Person sortiert
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 animate-fade-up" style="animation-delay: 0.25s;">
+                    <div class="mb-5">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                        Bild-Dokumentation
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        GPS-Koordinaten und Zeitstempel für gerichtsfeste Beweisführung
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 animate-fade-up" style="animation-delay: 0.3s;">
+                    <div class="mb-5">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                        Intelligente Suche
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Finden Sie jede Nachricht, jedes Foto, jede Absprache in Sekunden
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="card bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 animate-fade-up" style="animation-delay: 0.35s;">
+                    <div class="mb-5">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                        Sprachnachrichten-Text
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Deutsche Sprachnachrichten werden automatisch zu durchsuchbarem Text
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="bg-gray-900 text-white py-8 text-center">
+        <p class="text-sm">Preview generated from Astro components</p>
+        <p class="text-xs text-gray-400 mt-2">Open in browser to see full responsive behavior</p>
+    </div>
+
+</body>
+</html>
